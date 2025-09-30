@@ -1,0 +1,845 @@
+/**
+ * Subs Frontend Customer Portal Styles
+ *
+ * Styles for customer portal, profile management, and account settings.
+ *
+ * @package Subs
+ * @version 1.0.0
+ */
+
+/* =============================================================================
+   CUSTOMER PORTAL
+   ========================================================================== */
+
+.subs-customer-portal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Portal Header */
+.subs-portal-header {
+    margin-bottom: 40px;
+}
+
+.subs-portal-header h2 {
+    margin: 0 0 20px 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+/* Portal Navigation */
+.subs-portal-nav {
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 40px;
+}
+
+.subs-portal-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.subs-portal-nav li {
+    margin: 0;
+}
+
+.subs-nav-link {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #6b7280;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.2s;
+}
+
+.subs-nav-link:hover {
+    color: #3b82f6;
+    border-bottom-color: #93c5fd;
+}
+
+.subs-nav-link.active {
+    color: #3b82f6;
+    border-bottom-color: #3b82f6;
+}
+
+@media (max-width: 768px) {
+    .subs-portal-nav ul {
+        flex-direction: column;
+    }
+
+    .subs-nav-link {
+        width: 100%;
+        padding: 12px 16px;
+        border-bottom: none;
+        border-left: 3px solid transparent;
+        margin-bottom: 0;
+    }
+
+    .subs-nav-link.active {
+        border-left-color: #3b82f6;
+        border-bottom-color: transparent;
+        background: #eff6ff;
+    }
+}
+
+/* =============================================================================
+   PORTAL SECTIONS
+   ========================================================================== */
+
+.subs-portal-section {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 30px;
+}
+
+.subs-section-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.subs-section-header h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.subs-section-content {
+    margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+    .subs-portal-section {
+        padding: 20px;
+    }
+}
+
+/* =============================================================================
+   CUSTOMER FORMS
+   ========================================================================== */
+
+.subs-customer-form {
+    max-width: 600px;
+}
+
+.subs-customer-form .subs-form-group {
+    margin-bottom: 24px;
+}
+
+.subs-customer-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #374151;
+    font-size: 14px;
+}
+
+.subs-customer-form input[type="text"],
+.subs-customer-form input[type="email"],
+.subs-customer-form input[type="tel"],
+.subs-customer-form input[type="password"],
+.subs-customer-form select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.subs-customer-form input:focus,
+.subs-customer-form select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.subs-field-description {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.subs-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 640px) {
+    .subs-form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Form Actions */
+.subs-form-actions {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.subs-form-actions button {
+    padding: 12px 32px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.subs-form-actions button:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.subs-form-actions button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Form Results */
+.subs-form-result {
+    margin-top: 16px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.subs-form-result.success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+
+.subs-form-result.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+/* =============================================================================
+   PASSWORD SECTION
+   ========================================================================== */
+
+.subs-password-section {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 2px solid #e5e7eb;
+}
+
+.subs-password-section h4 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+/* =============================================================================
+   BILLING HISTORY
+   ========================================================================== */
+
+.subs-billing-history {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 2px solid #e5e7eb;
+}
+
+.subs-billing-history h4 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.subs-billing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.subs-billing-table thead {
+    background: #f9fafb;
+}
+
+.subs-billing-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.subs-billing-table td {
+    padding: 16px;
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.subs-billing-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.subs-billing-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Payment Status Badges */
+.subs-payment-status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.subs-status-succeeded {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.subs-status-failed {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.subs-status-pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.subs-view-invoice {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.subs-view-invoice:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .subs-billing-table {
+        font-size: 14px;
+    }
+
+    .subs-billing-table th,
+    .subs-billing-table td {
+        padding: 12px;
+    }
+
+    /* Stack table on mobile */
+    .subs-billing-table thead {
+        display: none;
+    }
+
+    .subs-billing-table tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+    }
+
+    .subs-billing-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 16px;
+        border-bottom: 1px solid #f3f4f6;
+    }
+
+    .subs-billing-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #6b7280;
+    }
+
+    .subs-billing-table td:last-child {
+        border-bottom: none;
+    }
+}
+
+/* =============================================================================
+   PAYMENT METHODS
+   ========================================================================== */
+
+.subs-payment-methods-list {
+    margin-bottom: 20px;
+}
+
+.subs-payment-method-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.subs-payment-method-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.subs-payment-method-icon {
+    width: 50px;
+    height: 32px;
+    background: #f3f4f6;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #6b7280;
+}
+
+.subs-payment-method-details {
+    font-size: 14px;
+}
+
+.subs-payment-method-brand {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.subs-payment-method-last4 {
+    color: #6b7280;
+}
+
+.subs-payment-method-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.subs-payment-method-actions button {
+    padding: 8px 16px;
+    border: 1px solid #d1d5db;
+    background: white;
+    color: #374151;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.subs-payment-method-actions button:hover {
+    border-color: #3b82f6;
+    color: #3b82f6;
+}
+
+.subs-payment-method-actions .subs-delete-btn:hover {
+    border-color: #dc2626;
+    color: #dc2626;
+}
+
+.subs-no-payment-methods {
+    padding: 40px;
+    text-align: center;
+    color: #6b7280;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.subs-add-payment-method {
+    margin-top: 20px;
+}
+
+.subs-payment-form {
+    margin-top: 30px;
+    padding: 24px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.subs-payment-form h4 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+/* =============================================================================
+   LOGIN REQUIRED
+   ========================================================================== */
+
+.subs-login-required {
+    padding: 60px 30px;
+    text-align: center;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.subs-login-required p {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    color: #6b7280;
+}
+
+/* =============================================================================
+   LOGIN FORM
+   ========================================================================== */
+
+.subs-login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.subs-login-form h3 {
+    margin: 0 0 24px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2937;
+    text-align: center;
+}
+
+.subs-login-form p {
+    margin: 0 0 24px 0;
+    text-align: center;
+    color: #6b7280;
+}
+
+.subs-login-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subs-login-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #374151;
+    font-size: 14px;
+}
+
+.subs-login-form input[type="text"],
+.subs-login-form input[type="password"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.subs-login-form input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.subs-login-form button {
+    width: 100%;
+    padding: 14px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.subs-login-form button:hover {
+    background: #2563eb;
+}
+
+/* =============================================================================
+   REGISTER FORM
+   ========================================================================== */
+
+.subs-register-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.subs-register-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subs-login-link {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.subs-login-link a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.subs-login-link a:hover {
+    text-decoration: underline;
+}
+
+/* =============================================================================
+   ACCOUNT LINKS
+   ========================================================================== */
+
+.subs-account-link,
+.subs-logout-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.subs-account-link:hover,
+.subs-logout-link:hover {
+    background: #eff6ff;
+}
+
+/* =============================================================================
+   ERROR & SUCCESS MESSAGES
+   ========================================================================== */
+
+.subs-error {
+    padding: 16px;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    color: #991b1b;
+    margin-bottom: 20px;
+}
+
+.subs-success {
+    padding: 16px;
+    background: #d1fae5;
+    border: 1px solid #6ee7b7;
+    border-radius: 8px;
+    color: #065f46;
+    margin-bottom: 20px;
+}
+
+/* =============================================================================
+   LOADING STATES
+   ========================================================================== */
+
+.subs-loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 50%;
+    border-top-color: #3b82f6;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.subs-section-loading {
+    padding: 60px;
+    text-align: center;
+}
+
+.subs-section-loading .subs-loading-spinner {
+    width: 40px;
+    height: 40px;
+    border-width: 4px;
+}
+
+/* =============================================================================
+   EMPTY STATES
+   ========================================================================== */
+
+.subs-empty-state {
+    padding: 60px 30px;
+    text-align: center;
+    color: #6b7280;
+}
+
+.subs-empty-state-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.subs-empty-state-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.subs-empty-state-description {
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+/* =============================================================================
+   RESPONSIVE TABLES
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .subs-payment-method-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .subs-payment-method-actions {
+        width: 100%;
+    }
+
+    .subs-payment-method-actions button {
+        flex: 1;
+    }
+}
+
+/* =============================================================================
+   UTILITIES
+   ========================================================================== */
+
+.subs-hidden {
+    display: none !important;
+}
+
+.subs-text-center {
+    text-align: center;
+}
+
+.subs-text-muted {
+    color: #6b7280;
+}
+
+.subs-mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.subs-mb-10 {
+    margin-bottom: 10px;
+}
+
+.subs-mb-20 {
+    margin-bottom: 20px;
+}
+
+.subs-mt-0 {
+    margin-top: 0 !important;
+}
+
+.subs-mt-10 {
+    margin-top: 10px;
+}
+
+.subs-mt-20 {
+    margin-top: 20px;
+}
+
+.subs-pt-20 {
+    padding-top: 20px;
+}
+
+.subs-pb-20 {
+    padding-bottom: 20px;
+}
+
+/* =============================================================================
+   PRINT STYLES
+   ========================================================================== */
+
+@media print {
+    .subs-portal-nav,
+    .subs-form-actions,
+    .subs-action-buttons,
+    .subs-add-payment-method {
+        display: none;
+    }
+
+    .subs-portal-section {
+        border: 1px solid #000;
+        page-break-inside: avoid;
+    }
+}
+
+/* =============================================================================
+   DARK MODE SUPPORT (Optional)
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+    .subs-customer-portal {
+        background: #111827;
+        color: #f3f4f6;
+    }
+
+    .subs-portal-section {
+        background: #1f2937;
+        border-color: #374151;
+    }
+
+    .subs-section-header h3,
+    .subs-portal-header h2 {
+        color: #f9fafb;
+    }
+
+    .subs-customer-form input,
+    .subs-customer-form select {
+        background: #374151;
+        border-color: #4b5563;
+        color: #f9fafb;
+    }
+
+    .subs-billing-table {
+        background: #1f2937;
+    }
+
+    .subs-billing-table thead {
+        background: #374151;
+    }
+
+    .subs-billing-table th {
+        color: #9ca3af;
+    }
+
+    .subs-billing-table td {
+        color: #d1d5db;
+        border-color: #374151;
+    }
+
+    .subs-billing-table tbody tr:hover {
+        background: #374151;
+    }
+}
