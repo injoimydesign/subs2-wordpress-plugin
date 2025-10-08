@@ -1,0 +1,3 @@
+# Subs Plugin - Templates Changelog
+
+See artifact for full changelog...

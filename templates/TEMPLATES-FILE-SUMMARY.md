@@ -1,0 +1,3 @@
+# Subs Plugin - Template Files Summary
+
+See artifact for full summary...
